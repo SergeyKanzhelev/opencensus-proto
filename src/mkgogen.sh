@@ -19,9 +19,12 @@ protoc --go_out=plugins=grpc:$OUTDIR opencensus/proto/stats/v1/stats.proto \
     && protoc --go_out=plugins=grpc:$OUTDIR opencensus/proto/resource/v1/resource.proto \
     && protoc --go_out=plugins=grpc:$OUTDIR opencensus/proto/trace/v1/trace.proto \
     && protoc --go_out=plugins=grpc:$OUTDIR opencensus/proto/trace/v1/trace_config.proto \
+    && protoc --go_out=plugins=grpc:$OUTDIR opencensus/proto/error/v1/error.proto \
+    && protoc --go_out=plugins=grpc:$OUTDIR opencensus/proto/error/v1/error_config.proto \
     && protoc -I=. --go_out=plugins=grpc:$OUTDIR opencensus/proto/agent/common/v1/common.proto \
     && protoc -I=. --go_out=plugins=grpc:$OUTDIR opencensus/proto/agent/metrics/v1/metrics_service.proto \
     && protoc -I=. --go_out=plugins=grpc:$OUTDIR opencensus/proto/agent/trace/v1/trace_service.proto \
+    && protoc -I=. --go_out=plugins=grpc:$OUTDIR opencensus/proto/agent/error/v1/error_service.proto \
     && protoc --grpc-gateway_out=logtostderr=true,grpc_api_configuration=./opencensus/proto/agent/trace/v1/trace_service_http.yaml:$OUTDIR opencensus/proto/agent/trace/v1/trace_service.proto
 
 # Generate OpenApi (Swagger) documentation file for grpc-gateway endpoints.

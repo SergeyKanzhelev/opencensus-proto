@@ -1,17 +1,20 @@
-# How to submit a bug report
+# Contributing
+
+## How to submit a bug report
 
 If you received an error message, please include it and any exceptions.
 
 We commonly need to know which language you are using (e.g. Java) and what
 platform you are on:
- * Operating system (i.e., ```uname -a```)
 
-# How to contribute
+* Operating system (i.e., ```uname -a```)
+
+## How to contribute
 
 We definitely welcome patches and contributions to Census! Here are some
 guideline and information about how to do so.
 
-## Before getting started
+### Before getting started
 
 In order to protect both you and ourselves, you will need to sign the
 [Contributor License Agreement](https://cla.developers.google.com/clas).
@@ -19,8 +22,11 @@ In order to protect both you and ourselves, you will need to sign the
 We follow the [Google Proto Style Guide](
 https://developers.google.com/protocol-buffers/docs/style).
 
-## Proposing changes
+### Proposing changes
 
-Make sure that `bazel build :all` completes successfully without any new warnings.
-Then create a Pull Request with your changes. When the changes are accepted, they
-will be merged or cherry-picked by a Census core developer.
+Install [bazel](https://docs.bazel.build/versions/master/install.html).
+
+Make sure that `bazel build :all` completes successfully from `src` folder
+without any new warnings. Then create a Pull Request with your changes. When the
+changes are accepted, they will be merged or cherry-picked by a Census core
+developer.
